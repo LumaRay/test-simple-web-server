@@ -1,0 +1,10 @@
+[package]
+name = "test-rust-astra"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+astra = "0.1.2"
+
+[profile.release]
+lto = true

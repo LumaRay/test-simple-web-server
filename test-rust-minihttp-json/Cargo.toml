@@ -1,0 +1,11 @@
+[package]
+name = "test-rust-minihttp-json"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+may_minihttp = { git = "https://github.com/Xudong-Huang/may_minihttp.git" }
+serde_json = "1.0.82"
+
+[profile.release]
+lto = true

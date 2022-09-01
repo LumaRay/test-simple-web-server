@@ -1,0 +1,35 @@
+sudo add-apt-repository ppa:linuxuprising/java 
+
+sudo apt update 
+
+sudo apt install oracle-java17-installer 
+
+sudo apt install oracle-java17-set-default 
+
+cat /etc/profile.d/jdk.sh
+source /etc/profile.d/jdk.sh
+
+java -version
+
+# sudo apt install gradle
+
+
+curl -s "https://get.sdkman.io" | bash
+
+source "/home/test/.sdkman/bin/sdkman-init.sh"
+
+sdk install springboot
+
+# sdk install gradle 4.5.1
+
+./gradlew build
+
+java -jar build/libs/hello-spring-web-0.0.1-SNAPSHOT.jar
+
+# https://help.clouding.io/hc/en-us/articles/360010806999-How-to-Deploy-Spring-Boot-Application-with-Nginx-on-Ubuntu-18-04
+
+git clone https://github.com/wg/wrk.git
+
+sudo apt install -y build-essential
+
+~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080/

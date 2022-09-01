@@ -1,0 +1,80 @@
+# sudo apt-get install git
+# sudo apt-get install curl zip unzip tar
+# git clone https://github.com/Microsoft/vcpkg.git
+# cd vcpkg
+# ./bootstrap-vcpkg.sh --disableMetrics
+# mkdir ~/.vcpkg
+# touch ~/.vcpkg/vcpkg.path.txt
+# ./vcpkg integrate install
+# ./vcpkg install boost
+# ./vcpkg install drogon
+
+sudo apt-get install cmake
+sudo apt-get install libboost-all-dev
+sudo apt-get install uuid-dev
+sudo apt-get install libbrotli-dev
+sudo apt-get install libssl-dev
+sudo apt-get install doxygen
+sudo apt-get install libjsoncpp-dev
+
+# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+# sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+# sudo apt-get update
+# sudo apt-get install postgresql postgresql-contrib
+# sudo apt-get install libpq-dev postgresql-server-dev-all
+sudo apt-get install postgresql-all
+
+# sudo apt-get install mysql-server
+# sudo mysql_secure_installation
+# sudo apt install libmysqlclient-dev 
+sudo apt install libmariadbclient-dev
+sudo apt install libmariadb-dev
+
+sudo apt-get install libsqlite3-dev
+
+sudo apt-get install libhiredis-dev
+
+# git clone https://github.com/Microsoft/vcpkg.git
+# cd vcpkg
+# ./bootstrap-vcpkg.sh --disableMetrics
+# mkdir ~/.vcpkg
+# touch ~/.vcpkg/vcpkg.path.txt
+# ./vcpkg integrate install
+# ./vcpkg install drogon  ### !!!
+# ./vcpkg install jsoncpp
+# export JSONCPP_INCLUDE_DIRS=/home/test/vcpkg/packages/jsoncpp_x64-linux/include/json/
+# export JSONCPP_LIBRARIES=/home/test/vcpkg/packages/jsoncpp_x64-linux/lib/
+
+
+cd ~
+# git clone https://github.com/drogonframework/drogon
+git clone -b v1.7.5 https://github.com/drogonframework/drogon.git
+cd drogon
+git submodule update --init
+mkdir build && cd build
+## cmake -DJSONCPP_INCLUDE_DIRS=/home/test/vcpkg/packages/jsoncpp_x64-linux/include/ -DJSONCPP_LIBRARIES=/home/test/vcpkg/packages/jsoncpp_x64-linux/lib/ ..
+# cmake ..
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install
+cd ..
+make
+sudo make install
+
+# sudo ln -s /usr/include/jsoncpp/json/ /usr/include/json
+
+// https://github.com/drogonframework/drogon/wiki/ENG-03-Quick-Start
+drogon_ctl create project test-cpp-drogon
+cd test-cpp-drogon
+# gedit main.cc
+cd controllers
+drogon_ctl create controller TestCtrl
+# gedit TestCtrl.cc
+# gedit TestCtrl.h
+cd ..
+mkdir build
+cd build 
+cmake ..
+make
+
+./test-cpp-drogon > /dev/null 2>&1

@@ -1,0 +1,45 @@
+{
+    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'test-rust-actix-jel'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=test-rust-actix-jel",
+                    "--package=test-rust-actix-jel"
+                ],
+                "filter": {
+                    "name": "test-rust-actix-jel",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'test-rust-actix-jel'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=test-rust-actix-jel",
+                    "--package=test-rust-actix-jel"
+                ],
+                "filter": {
+                    "name": "test-rust-actix-jel",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
