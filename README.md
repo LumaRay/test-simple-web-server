@@ -1,6 +1,4 @@
-# test-simple-web-server
-
-Testing performance of https servers on different languages.
+# Testing performance of https servers on different languages
 
 The test includes sending jel library ( https://github.com/LumaRay/jel ) to a client and running a simple command to show a header.
 
