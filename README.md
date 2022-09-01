@@ -16,6 +16,7 @@ Test results are given in ascending order, worst to best.
 
 ## test-python-flask
 
+```
 test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:5000
 Running 30s test @ http://127.0.0.1:5000
   4 threads and 400 connections
@@ -26,6 +27,7 @@ Running 30s test @ http://127.0.0.1:5000
   Socket errors: connect 0, read 84, write 0, timeout 23
 Requests/sec:   1121.35
 Transfer/sec:      7.17MB
+```
 
 
 ## test-python-waitress
