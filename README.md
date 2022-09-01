@@ -32,6 +32,7 @@ Transfer/sec:      7.17MB
 
 ## test-python-waitress
 
+```
 test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
@@ -41,10 +42,12 @@ Running 30s test @ http://127.0.0.1:8080
   49234 requests in 30.07s, 313.13MB read
 Requests/sec:   1637.05
 Transfer/sec:     10.41MB
+```
 
 
 ## test-python-fastapi
 
+```
 test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:44777
 Running 30s test @ http://127.0.0.1:44777
   4 threads and 400 connections
@@ -54,10 +57,12 @@ Running 30s test @ http://127.0.0.1:44777
   156571 requests in 30.05s, 0.97GB read
 Requests/sec:   5211.12
 Transfer/sec:     33.14MB
+```
 
 
 ## test-python-blacksheep
 
+```
 test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:44777
 Running 30s test @ http://127.0.0.1:44777
   4 threads and 400 connections
@@ -67,10 +72,12 @@ Running 30s test @ http://127.0.0.1:44777
   210692 requests in 30.03s, 1.31GB read
 Requests/sec:   7015.40
 Transfer/sec:     44.51MB
+```
 
 
 ## test-java-spring-boot
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
@@ -80,10 +87,12 @@ Running 30s test @ http://127.0.0.1:8080
   847129 requests in 30.07s, 5.25GB read
 Requests/sec:  28172.08
 Transfer/sec:    178.70MB
+```
 
 
 ## test-rust-astra
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
@@ -93,10 +102,12 @@ Running 30s test @ http://127.0.0.1:8080
   867941 requests in 30.09s, 5.38GB read
 Requests/sec:  28848.86
 Transfer/sec:    183.10MB
+```
 
 
 ## test-cpp-lithium 4 thread (but seems to use 1 core)
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:7774
 Running 30s test @ http://127.0.0.1:7774
   4 threads and 400 connections
@@ -106,10 +117,12 @@ Running 30s test @ http://127.0.0.1:7774
   1280489 requests in 30.08s, 7.95GB read
 Requests/sec:  42567.00
 Transfer/sec:    270.71MB
+```
 
 
 ## test-go-http
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:3333
 Running 30s test @ http://127.0.0.1:3333
   4 threads and 400 connections
@@ -119,10 +132,12 @@ Running 30s test @ http://127.0.0.1:3333
   1345604 requests in 30.10s, 8.43GB read
 Requests/sec:  44708.65
 Transfer/sec:    286.95MB
+```
 
 
 ## test-cpp-drogon 1 thread (uses 1 core)
 
+```
 test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
@@ -132,10 +147,12 @@ Running 30s test @ http://127.0.0.1:8080
   1653428 requests in 30.09s, 10.34GB read
 Requests/sec:  54950.97
 Transfer/sec:    351.82MB
+```
 
 
 ## test-cs-dotnet-core-webapp
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:5000
 Running 30s test @ http://127.0.0.1:5000
   4 threads and 400 connections
@@ -145,10 +162,12 @@ Running 30s test @ http://127.0.0.1:5000
   1994978 requests in 30.07s, 12.41GB read
 Requests/sec:  66351.23
 Transfer/sec:    422.57MB
+```
 
 
 ## test-go-fasthttp
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
@@ -158,10 +177,12 @@ Running 30s test @ http://127.0.0.1:8080
   2662898 requests in 30.07s, 16.80GB read
 Requests/sec:  88570.12
 Transfer/sec:    572.35MB
+```
 
 
 ## test-rust-axum
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:3000
 Running 30s test @ http://127.0.0.1:3000
   4 threads and 400 connections
@@ -171,10 +192,12 @@ Running 30s test @ http://127.0.0.1:3000
   3522348 requests in 30.10s, 21.82GB read
 Requests/sec: 117013.61
 Transfer/sec:    742.20MB
+```
 
 
 ## test-rust-warp
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:3030
 Running 30s test @ http://127.0.0.1:3030
   4 threads and 400 connections
@@ -184,10 +207,12 @@ Running 30s test @ http://127.0.0.1:3030
   3884225 requests in 30.10s, 24.06GB read
 Requests/sec: 129039.95
 Transfer/sec:    818.49MB
+```
 
 
 ## test-rust-actix
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
@@ -197,10 +222,12 @@ Running 30s test @ http://127.0.0.1:8080
   3893787 requests in 30.10s, 24.17GB read
 Requests/sec: 129365.80
 Transfer/sec:    822.40MB
+```
 
 
 ## test-rust-minihttp-json
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
@@ -210,10 +237,12 @@ Running 30s test @ http://127.0.0.1:8080
   4783994 requests in 30.10s, 29.74GB read
 Requests/sec: 158945.49
 Transfer/sec:      0.99GB
+```
 
 
 ## test-rust-hyper
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:5555
 Running 30s test @ http://127.0.0.1:5555
   4 threads and 400 connections
@@ -223,10 +252,12 @@ Running 30s test @ http://127.0.0.1:5555
   4895365 requests in 30.08s, 30.34GB read
 Requests/sec: 162735.60
 Transfer/sec:      1.01GB
+```
 
 
 ## test-cpp-drogon 4 threads (uses 4 cores)
 
+```
 test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
@@ -236,10 +267,12 @@ Running 30s test @ http://127.0.0.1:8080
   5138322 requests in 30.09s, 32.13GB read
 Requests/sec: 170738.60
 Transfer/sec:      1.07GB
+```
 
 
 ## test-rust-minihttp
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
@@ -249,6 +282,7 @@ Running 30s test @ http://127.0.0.1:8080
   6182331 requests in 30.09s, 38.14GB read
 Requests/sec: 205475.87
 Transfer/sec:      1.27GB
+```
 
 
 ---
@@ -257,6 +291,7 @@ Transfer/sec:      1.27GB
 
 ## rust-actix-service
 
+```
 test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8000
 Running 30s test @ http://127.0.0.1:8000
   4 threads and 400 connections
@@ -266,3 +301,4 @@ Running 30s test @ http://127.0.0.1:8000
   5071450 requests in 30.10s, 473.98MB read
 Requests/sec: 168486.24
 Transfer/sec:     15.75MB
+```
