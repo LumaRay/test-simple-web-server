@@ -17,7 +17,7 @@ Test results are given in ascending order, worst to best.
 ## test-python-flask
 
 ```
-test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:5000
+test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:5000
 Running 30s test @ http://127.0.0.1:5000
   4 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -33,7 +33,7 @@ Transfer/sec:      7.17MB
 ## test-python-waitress
 
 ```
-test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
+test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -48,7 +48,7 @@ Transfer/sec:     10.41MB
 ## test-python-fastapi
 
 ```
-test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:44777
+test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:44777
 Running 30s test @ http://127.0.0.1:44777
   4 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -63,7 +63,7 @@ Transfer/sec:     33.14MB
 ## test-python-blacksheep
 
 ```
-test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:44777
+test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:44777
 Running 30s test @ http://127.0.0.1:44777
   4 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -72,6 +72,21 @@ Running 30s test @ http://127.0.0.1:44777
   210692 requests in 30.03s, 1.31GB read
 Requests/sec:   7015.40
 Transfer/sec:     44.51MB
+```
+
+
+## test-rust-yew-experiments
+
+```
+test@ubuntu:~/$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
+Running 30s test @ http://127.0.0.1:8080
+  4 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    31.03ms   21.29ms  94.74ms   59.70%
+    Req/Sec     3.23k   211.18     4.25k    69.50%
+  385906 requests in 30.07s, 2.89GB read
+Requests/sec:  12833.43
+Transfer/sec:     98.27MB
 ```
 
 
@@ -138,7 +153,7 @@ Transfer/sec:    286.95MB
 ## test-cpp-drogon 1 thread (uses 1 core)
 
 ```
-test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
+test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -258,7 +273,7 @@ Transfer/sec:      1.01GB
 ## test-cpp-drogon 4 threads (uses 4 cores)
 
 ```
-test@test-virtual-machine:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
+test@ubuntu:~$ ~/wrk/wrk -t4 -c400 -d30s http://127.0.0.1:8080
 Running 30s test @ http://127.0.0.1:8080
   4 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
